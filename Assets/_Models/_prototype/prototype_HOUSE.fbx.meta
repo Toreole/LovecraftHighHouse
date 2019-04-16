@@ -22,6 +22,10 @@ ModelImporter:
     100032: Sphere.011
     100034: Sphere.012
     100036: Sphere.013
+    100038: Sphere.000
+    100040: Sphere.001
+    100042: Sphere.006
+    100044: Sphere.007
     400000: Cube
     400002: Cube.001
     400004: Cube.002
@@ -41,10 +45,16 @@ ModelImporter:
     400032: Sphere.011
     400034: Sphere.012
     400036: Sphere.013
+    400038: Sphere.000
+    400040: Sphere.001
+    400042: Sphere.006
+    400044: Sphere.007
     2100000: Material.001
     2100002: Material.004
     2100004: Material.003
     2100006: Material.002
+    2100008: Material.009
+    2100010: Material.006
     2300000: Cube
     2300002: Cube.001
     2300004: Cube.002
@@ -63,6 +73,10 @@ ModelImporter:
     2300030: Sphere.011
     2300032: Sphere.012
     2300034: Sphere.013
+    2300036: Sphere.000
+    2300038: Sphere.001
+    2300040: Sphere.006
+    2300042: Sphere.007
     3300000: Cube
     3300002: Cube.001
     3300004: Cube.002
@@ -81,6 +95,10 @@ ModelImporter:
     3300030: Sphere.011
     3300032: Sphere.012
     3300034: Sphere.013
+    3300036: Sphere.000
+    3300038: Sphere.001
+    3300040: Sphere.006
+    3300042: Sphere.007
     4300000: Cylinder
     4300002: Cube.005
     4300004: Cube.004
@@ -99,6 +117,10 @@ ModelImporter:
     4300030: Cube.001
     4300032: Cube
     4300034: Cube.003
+    4300036: Sphere.007
+    4300038: Sphere.006
+    4300040: Sphere.000
+    4300042: Sphere.001
   externalObjects: {}
   materials:
     importMaterials: 1
