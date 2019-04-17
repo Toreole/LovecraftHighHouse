@@ -85,7 +85,6 @@ namespace HighHouse
 
         public void AddItem(Item item)
         {
-            Debug.Log("Add: " + item.name);
             inventory.Add(item);
             itemPickupText.alpha = 1f;
             itemPickupText.text = string.Format("{0} wurde ins Inventar gelegt.", item.name);
@@ -106,13 +105,13 @@ namespace HighHouse
 
         public bool HasItem(Item item)
         {
-            Debug.Log("Check for: " + item.name);
+            if (item is null)
+                return true;
             return inventory.Exists(x => x == item);
         }
 
         public void RemoveItem(Item item)
         {
-            Debug.Log("Remove: " + item.name);
             inventory.Remove(item);
             itemPickupText.alpha = 1f;
             itemPickupText.text = string.Format("{0} wurde vom Inventar entfernt.", item.name);
