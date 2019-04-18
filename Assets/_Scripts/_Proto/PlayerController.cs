@@ -27,6 +27,7 @@ namespace HighHouse
 
         private void Start()
         {
+            Cursor.lockState = CursorLockMode.Locked;
             camTransform = transform.GetChild(0);
             cam = camTransform.GetComponent<Camera>();
         }
