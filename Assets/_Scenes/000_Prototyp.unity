@@ -702,7 +702,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 1045079531}
-  speed: 2
+  speed: 3
   xRotLimit: 60
   uiCenterDot: {fileID: 425615917}
   itemPickupText: {fileID: 82263445}
