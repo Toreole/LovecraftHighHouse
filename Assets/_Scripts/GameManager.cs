@@ -10,7 +10,7 @@ namespace HighHouse
     /// </summary>
     public class GameManager : MonoBehaviour
     {
-        public static GameManager instance;
+        public static GameManager instance = null;
 
         [SerializeField]
         protected string[] startScenes;
