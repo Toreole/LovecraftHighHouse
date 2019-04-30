@@ -242,7 +242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 269197807}
-  speed: 2
+  speed: 4
   xRotLimit: 50
   uiCenterDot: {fileID: 1179827354}
   itemPickupText: {fileID: 0}
