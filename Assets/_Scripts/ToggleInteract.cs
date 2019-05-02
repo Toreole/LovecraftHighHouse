@@ -8,7 +8,7 @@ namespace HighHouse {
         [SerializeField]
         protected Animator anim;
 
-        public void Interact(PlayerController player)
+        public void Interact(PlayerInteract player)
         {
             anim.SetTrigger("Toggle");
         }

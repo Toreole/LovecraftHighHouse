@@ -9,7 +9,7 @@ namespace HighHouse
         [SerializeField]
         protected Item item;
 
-        public void Interact(PlayerController player)
+        public void Interact(PlayerInteract player)
         {
             //todo: add item to players inventory, probably mark it as collected to avoid respawns
             Destroy(gameObject);

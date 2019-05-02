@@ -9,7 +9,7 @@ namespace HighHouse
         [SerializeField]
         protected Item item;
 
-        public void Interact(PlayerController player)
+        public void Interact(PlayerInteract player)
         {
             player.AddItem(item);
             Destroy(gameObject);

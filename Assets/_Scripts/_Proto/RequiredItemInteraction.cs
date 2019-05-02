@@ -11,7 +11,7 @@ namespace HighHouse
         [SerializeField]
         protected UnityEvent onInteractSuccess;
 
-        public void Interact(PlayerController player)
+        public void Interact(PlayerInteract player)
         {
             if (player.HasItem(requiredItem))
             {
@@ -19,8 +19,8 @@ namespace HighHouse
                 onInteractSuccess?.Invoke();
                 Destroy(this);
             }
-            else
-                player.MissingItem();
+            //else
+            //    player.MissingItem();
         }
     }
 }

@@ -122,6 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 269197806}
   - component: {fileID: 269197808}
+  - component: {fileID: 269197809}
   - component: {fileID: 269197807}
   - component: {fileID: 269197805}
   - component: {fileID: 269197804}
@@ -244,8 +245,21 @@ MonoBehaviour:
   agent: {fileID: 269197807}
   speed: 4
   xRotLimit: 50
+--- !u!114 &269197809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269197802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8fcdea889c3dc342b2b18f9ca1dba31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 1217557354}
   uiCenterDot: {fileID: 1179827354}
-  itemPickupText: {fileID: 0}
+  msg: {fileID: 0}
 --- !u!1 &418493800
 GameObject:
   m_ObjectHideFlags: 0

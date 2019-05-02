@@ -14,12 +14,6 @@ namespace HighHouse
         protected float speed = 2f;
         [SerializeField]
         protected float xRotLimit = 50f;
-        [SerializeField]
-        protected GameObject uiCenterDot;
-        [SerializeField]
-        protected TextMeshProUGUI itemPickupText;
-
-        protected List<Item> inventory = new List<Item>();
 
         protected float currentXRot = 0f;
         protected Transform camTransform;
@@ -36,7 +30,6 @@ namespace HighHouse
         {
             Move();
             Rotate();
-            CheckInteraction();
         }
 
         private void Move()
@@ -63,67 +56,6 @@ namespace HighHouse
                 camTransform.Rotate(xDelta, 0f, 0f);
                 currentXRot += xDelta;
             }
-        }
-
-        void CheckInteraction()
-        {
-            var ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f));
-            RaycastHit hitInfo;
-            if (Physics.Raycast(ray, out hitInfo, 2.5f))
-            {
-                var interactable = hitInfo.collider.GetComponent<IInteractable>();
-                var interExists = interactable != null;
-                uiCenterDot.SetActive(interExists);
-                if (interExists)
-                {
-                    if (Input.GetMouseButtonDown(0))
-                        interactable.Interact(this);
-                }
-            }
-            else
-                uiCenterDot.SetActive(false);
-        }
-
-        public void AddItem(Item item)
-        {
-            inventory.Add(item);
-            itemPickupText.alpha = 1f;
-            itemPickupText.text = string.Format("{0} wurde ins Inventar gelegt.", item.name);
-            StartCoroutine(FadeText());
-        }
-
-        IEnumerator FadeText()
-        {
-            yield return new WaitForSeconds(1f);
-            for (float t = 3f; t > 0f; t -= Time.deltaTime)
-            {
-                itemPickupText.alpha = t / 3f;
-                yield return null;
-            }
-            itemPickupText.alpha = 0f;
-            itemPickupText.text = "";
-        }
-
-        public bool HasItem(Item item)
-        {
-            if (item is null)
-                return true;
-            return inventory.Exists(x => x == item);
-        }
-
-        public void RemoveItem(Item item)
-        {
-            inventory.Remove(item);
-            itemPickupText.alpha = 1f;
-            itemPickupText.text = string.Format("{0} wurde vom Inventar entfernt.", item.name);
-            StartCoroutine(FadeText());
-        }
-
-        public void MissingItem()
-        {
-            itemPickupText.alpha = 1f;
-            itemPickupText.text = "Hier fehlt etwas.";
-            StartCoroutine(FadeText());
         }
     }
 }
